@@ -1,11 +1,10 @@
-﻿Build started 2013-05-07 15:14:23.
-     1>Project "C:\Users\Mateusz\Desktop\Nowy folder\passwd\Passwd\Passwd\Passwd.vcxproj" on node 2 (Build target(s)).
-     1>ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"Debug\Passwd.res" Passwd.rc 
-     1>Passwd.rc(3): fatal error RC1015: cannot open include file 'resource.h'.
-         
-     1>Done Building Project "C:\Users\Mateusz\Desktop\Nowy folder\passwd\Passwd\Passwd\Passwd.vcxproj" (Build target(s)) -- FAILED.
+﻿Build started 2013-05-07 16:01:07.
+     1>Project "C:\Users\user\Documents\github\passwd\Passwd\Passwd\Passwd.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         D:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Documents\github\passwd\Passwd\Debug\Passwd.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Mateusz\Desktop\Nowy folder\passwd\Passwd\Passwd" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\Documents\github\passwd\Passwd\Debug\Passwd.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Documents\github\passwd\Passwd\Debug\Passwd.lib" /MACHINE:X86 Debug\Modul.obj
+     1>LINK : fatal error LNK1561: entry point must be defined
+     1>Done Building Project "C:\Users\user\Documents\github\passwd\Passwd\Passwd\Passwd.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.09
+Time Elapsed 00:00:00.60

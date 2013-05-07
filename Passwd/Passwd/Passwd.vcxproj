@@ -67,7 +67,7 @@
     <None Include="OpcjeWywolania.hh" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Passwd.rc" />
+    <ClCompile Include="Modul.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

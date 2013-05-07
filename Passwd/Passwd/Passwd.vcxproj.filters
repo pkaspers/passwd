@@ -18,13 +18,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="OpcjeWywolania.hh">
+    <ClCompile Include="Modul.cpp">
       <Filter>Source Files</Filter>
-    </None>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Passwd.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <None Include="OpcjeWywolania.hh">
+      <Filter>Header Files\inc</Filter>
+    </None>
   </ItemGroup>
 </Project>
