@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Rezultat parsowania opcji wywołania:: StronaGlowna Wykorzystanie rezultatów parsowania opcji wywołania programu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Wygenerowano przez Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li class="current"><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>StronaGlowna Wykorzystanie rezultatów parsowania opcji wywołania programu </h1><h3 class="version">0.1 </h3><p>Niniejsza dokumentacja zawiera opis klasy <a class="el" href="class_opcje_wywolania.html" title="Moduje zbiór wartości opcji wywołania programu.">OpcjeWywolania</a>. W obiekcie tej klasy przechowywany jest wynik parsowania opcji programu opisanego w zadaniu nr 9.</p>
+<p>Z punktu widzenia korzystania z tej klasy istotne są tylko dwie metody, a mianowicie <a class="el" href="class_opcje_wywolania.html#af3db8839dce97d9ce38bb8b18c294302">OpcjeWywolania::JakSortowac()</a> oraz <a class="el" href="class_opcje_wywolania.html#a952a0eece643b488580ff136eef42dcf">OpcjeWywolania::JakSzukac()</a>. Najprostszy przykład ich wykorzystania w funkcji, która musi się znaleźć w module, aby dostarczony zalążek skonsolidował się poprawnie. </p>
+<div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> PrzetworzListe_Uzytkownikow_i_Grupy(<span class="keyword">const</span> <a class="code" href="class_opcje_wywolania.html" title="Moduje zbiór wartości opcji wywołania programu.">OpcjeWywolania</a>&amp; Opcje)
+ {
+  cout &lt;&lt; endl;
+  cout &lt;&lt; <span class="stringliteral">&quot;Wywolanie przetwarzania listy uzytkownikow.&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+  cout &lt;&lt; <span class="stringliteral">&quot;  Rodzaj sortowania: &quot;</span> &lt;&lt; Opcje.<a class="code" href="class_opcje_wywolania.html#af3db8839dce97d9ce38bb8b18c294302" title="Zwraca identyfikator rodzaju sortowania.">JakSortowac</a>() &lt;&lt; endl;
+  cout &lt;&lt; <span class="stringliteral">&quot;    Rodzaj szukania: &quot;</span> &lt;&lt; Opcje.<a class="code" href="class_opcje_wywolania.html#a952a0eece643b488580ff136eef42dcf" title="Zwraca identyfikator rodzaju szukania.">JakSzukac</a>() &lt;&lt; endl;
+  cout &lt;&lt; endl;
+  cout &lt;&lt; <span class="stringliteral">&quot;              Login: \&quot;&quot;</span> &lt;&lt; Opcje.<a class="code" href="class_opcje_wywolania.html#a64b7be143738d089149d51e018cc37cf" title="Udostępnia login użytkownika.">WezLogin</a>() &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; endl;                 
+  cout &lt;&lt; <span class="stringliteral">&quot;                 Id: &quot;</span> &lt;&lt; Opcje.<a class="code" href="class_opcje_wywolania.html#a2a10959b7e6353c708d69517093ad2e4" title="Udostępnia identyfikator użytkownika.">WezIdUzytkownika</a>() &lt;&lt; endl;                   
+  cout &lt;&lt; endl;  
+ }
+</pre></div><p> Tę postać funkcji można użyć do przetesowania wywołania programu z różnymi opcjami, np. </p>
+<div class="fragment"><pre class="fragment">
+   ./uzytkownicy -s login -z 10421
+</pre></div><p> Spodziewany wynik wywołania to: </p>
+<div class="fragment"><pre class="fragment">
+
+Wywolanie przetwarzania listy uzytkownikow.
+
+  Rodzaj sortowania: TS_WgLoginow
+    Rodzaj szukania: TSz_IdUzytkownika
+
+              Login: ""
+                 Id: 10421
+</pre></div> </div>
+<hr class="footer"/><address style="text-align: right;"><small>Wygenerowano Thu May 2 13:02:38 2013 dla Rezultat parsowania opcji wywołania: programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

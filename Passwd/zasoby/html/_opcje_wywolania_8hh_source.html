@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Rezultat parsowania opcji wywołania:: Plik źródłowy OpcjeWywolania.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Wygenerowano przez Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&nbsp;plików</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="dir_e9f8eb9acced8a20ebc25fa427742a5c.html">inc</a>
+  </div>
+</div>
+<div class="contents">
+<h1>OpcjeWywolania.hh</h1><a href="_opcje_wywolania_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef OPCJEWYWOLANIA_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define OPCJEWYWOLANIA_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00013"></a><a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648e">00013</a> <span class="keyword">enum</span> <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648e" title="Definiuje zbiór wartości określających rodzaje sortowania.">TypSortowania</a> { <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648eaa6aadc2ed8ef3a963f932bd7a1f31a47">TS_WgNazwisk</a> , 
+<a name="l00014"></a><a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648ea1b6d288954e3826a1387600eaed55631">00014</a>                      <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648ea1b6d288954e3826a1387600eaed55631">TS_WgLoginow</a> ,  
+<a name="l00015"></a><a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648eacbd303a128dbf651ebc4f30f2cbd42a0">00015</a>                      <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648eacbd303a128dbf651ebc4f30f2cbd42a0">TS_WgIdUzytkownika</a> 
+<a name="l00016"></a>00016                    };
+<a name="l00017"></a>00017 
+<a name="l00029"></a>00029 <span class="keyword">inline</span>
+<a name="l00030"></a><a class="code" href="_opcje_wywolania_8hh.html#accf422e83fa1890c71e756ba8321be6a">00030</a> std::ostream&amp; <a class="code" href="_opcje_wywolania_8hh.html#accf422e83fa1890c71e756ba8321be6a" title="Wyświetla nazwę symbolu typu TypSortowania.">operator &lt;&lt; </a>(std::ostream&amp; StrmWy, <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648e" title="Definiuje zbiór wartości określających rodzaje sortowania.">TypSortowania</a>  TSort)
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032   <span class="keyword">const</span> <span class="keywordtype">char</span> *TabNapisow[] = { <span class="stringliteral">&quot;TS_WgNazwisk&quot;</span>, <span class="stringliteral">&quot;TS_WgLoginow&quot;</span>, <span class="stringliteral">&quot;TS_WgIdUzytkownika&quot;</span> };
+<a name="l00033"></a>00033   StrmWy &lt;&lt; TabNapisow[TSort];
+<a name="l00034"></a>00034   <span class="keywordflow">return</span> StrmWy;
+<a name="l00035"></a>00035 }
+<a name="l00036"></a>00036 
+<a name="l00043"></a><a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7">00043</a> <span class="keyword">enum</span> <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7" title="Definiuje zbiór wartości określających kryteria wyszukiwania użytkownika.">TypSzukania</a> {
+<a name="l00044"></a><a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7a83070c470a8c1e627c1de9dec1a046b6">00044</a>   <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7a83070c470a8c1e627c1de9dec1a046b6">TSz_NajwiekszyId</a>  ,
+<a name="l00045"></a><a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7ae217a1e13b5f3e79018b98f852737010">00045</a>   <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7ae217a1e13b5f3e79018b98f852737010">TSz_Login</a>         ,
+<a name="l00046"></a><a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7a319b296604633b0aaca86e5357a9a58c">00046</a>   <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7a319b296604633b0aaca86e5357a9a58c">TSz_IdUzytkownika</a> 
+<a name="l00047"></a>00047 };
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 
+<a name="l00061"></a>00061 <span class="keyword">inline</span>
+<a name="l00062"></a><a class="code" href="_opcje_wywolania_8hh.html#a02bde65fe8b986b69a9e6a515d9fc4c9">00062</a> std::ostream&amp; <a class="code" href="_opcje_wywolania_8hh.html#accf422e83fa1890c71e756ba8321be6a" title="Wyświetla nazwę symbolu typu TypSortowania.">operator &lt;&lt; </a>(std::ostream&amp; StrmWy, <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7" title="Definiuje zbiór wartości określających kryteria wyszukiwania użytkownika.">TypSzukania</a>  TSzukania)
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064   <span class="keyword">const</span> <span class="keywordtype">char</span> *TabNapisow[] = 
+<a name="l00065"></a>00065             { <span class="stringliteral">&quot;TSz_NajwiekszyId&quot;</span>, <span class="stringliteral">&quot;TSz_Login&quot;</span>, <span class="stringliteral">&quot;TSz_IdUzytkownika&quot;</span> };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067   StrmWy &lt;&lt; TabNapisow[TSzukania];
+<a name="l00068"></a>00068   <span class="keywordflow">return</span> StrmWy;
+<a name="l00069"></a>00069 }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 
+<a name="l00081"></a><a class="code" href="class_opcje_wywolania.html">00081</a> <span class="keyword">class </span><a class="code" href="class_opcje_wywolania.html" title="Moduje zbiór wartości opcji wywołania programu.">OpcjeWywolania</a> {
+<a name="l00082"></a>00082   <span class="keyword">public</span>:
+<a name="l00090"></a><a class="code" href="class_opcje_wywolania.html#a81f8ea43aa81cd752f9b6e75500be179">00090</a>    <a class="code" href="class_opcje_wywolania.html#a81f8ea43aa81cd752f9b6e75500be179" title="Inicjalizuje domyślne wartości dla poszczególnych pól.">OpcjeWywolania</a>(): <a class="code" href="class_opcje_wywolania.html#a8871cbd38cd2392b0fe5ff3ee5e916f4" title="Rodzaj sortowania listy użytkowników.">_RodzajSortowania</a>(<a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648eaa6aadc2ed8ef3a963f932bd7a1f31a47">TS_WgNazwisk</a>), <a class="code" href="class_opcje_wywolania.html#a8bf1daee70d339bf65e28417a2c67cd7" title="Identyfikator użytkownika.">_IdUzytkownika</a>(-1)
+<a name="l00091"></a>00091       { }
+<a name="l00092"></a>00092  
+<a name="l00100"></a><a class="code" href="class_opcje_wywolania.html#a64b7be143738d089149d51e018cc37cf">00100</a>    <span class="keyword">const</span> std::string&amp; <a class="code" href="class_opcje_wywolania.html#a64b7be143738d089149d51e018cc37cf" title="Udostępnia login użytkownika.">WezLogin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_opcje_wywolania.html#ab9ee9efb5fb960574e96006902277060" title="Login użytkownika.">_Login</a>; }
+<a name="l00101"></a>00101 
+<a name="l00109"></a><a class="code" href="class_opcje_wywolania.html#a2a10959b7e6353c708d69517093ad2e4">00109</a>    <span class="keywordtype">int</span> <a class="code" href="class_opcje_wywolania.html#a2a10959b7e6353c708d69517093ad2e4" title="Udostępnia identyfikator użytkownika.">WezIdUzytkownika</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_opcje_wywolania.html#a8bf1daee70d339bf65e28417a2c67cd7" title="Identyfikator użytkownika.">_IdUzytkownika</a>; }
+<a name="l00110"></a>00110 
+<a name="l00117"></a><a class="code" href="class_opcje_wywolania.html#a952a0eece643b488580ff136eef42dcf">00117</a>    <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7" title="Definiuje zbiór wartości określających kryteria wyszukiwania użytkownika.">TypSzukania</a> <a class="code" href="class_opcje_wywolania.html#a952a0eece643b488580ff136eef42dcf" title="Zwraca identyfikator rodzaju szukania.">JakSzukac</a>()<span class="keyword"> const </span>
+<a name="l00118"></a>00118 <span class="keyword">    </span>{  <span class="keywordflow">if</span> (<a class="code" href="class_opcje_wywolania.html#a8bf1daee70d339bf65e28417a2c67cd7" title="Identyfikator użytkownika.">_IdUzytkownika</a> != -1) <span class="keywordflow">return</span> <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7a319b296604633b0aaca86e5357a9a58c">TSz_IdUzytkownika</a>; 
+<a name="l00119"></a>00119        <span class="keywordflow">if</span> (!<a class="code" href="class_opcje_wywolania.html#ab9ee9efb5fb960574e96006902277060" title="Login użytkownika.">_Login</a>.empty()) <span class="keywordflow">return</span> <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7ae217a1e13b5f3e79018b98f852737010">TSz_Login</a>;
+<a name="l00120"></a>00120        <span class="keywordflow">return</span> <a class="code" href="_opcje_wywolania_8hh.html#a6a3230e3c259a8eaaec374bffc3b9ab7a83070c470a8c1e627c1de9dec1a046b6">TSz_NajwiekszyId</a>;
+<a name="l00121"></a>00121     }   
+<a name="l00122"></a>00122 
+<a name="l00129"></a><a class="code" href="class_opcje_wywolania.html#af3db8839dce97d9ce38bb8b18c294302">00129</a>   <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648e" title="Definiuje zbiór wartości określających rodzaje sortowania.">TypSortowania</a> <a class="code" href="class_opcje_wywolania.html#af3db8839dce97d9ce38bb8b18c294302" title="Zwraca identyfikator rodzaju sortowania.">JakSortowac</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_opcje_wywolania.html#a8871cbd38cd2392b0fe5ff3ee5e916f4" title="Rodzaj sortowania listy użytkowników.">_RodzajSortowania</a>; }
+<a name="l00130"></a>00130 
+<a name="l00140"></a><a class="code" href="class_opcje_wywolania.html#a6ef42f6da5f30de27c9bd81dedb73e17">00140</a>    <span class="keywordtype">void</span> <a class="code" href="class_opcje_wywolania.html#a6ef42f6da5f30de27c9bd81dedb73e17" title="Zmienia informacje o rodzaju sortowania.">ZmienTypSortowania</a>( <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648e" title="Definiuje zbiór wartości określających rodzaje sortowania.">TypSortowania</a>  RodzajSort)
+<a name="l00141"></a>00141                           { <a class="code" href="class_opcje_wywolania.html#a8871cbd38cd2392b0fe5ff3ee5e916f4" title="Rodzaj sortowania listy użytkowników.">_RodzajSortowania</a> = RodzajSort; }
+<a name="l00142"></a>00142 
+<a name="l00153"></a><a class="code" href="class_opcje_wywolania.html#adfb552ef3a435582ee2826e930ec3ed2">00153</a>    <span class="keywordtype">void</span> <a class="code" href="class_opcje_wywolania.html#adfb552ef3a435582ee2826e930ec3ed2" title="Zmienia Id użytkownika, który ma być znaleziony.">ZmienIdUzytkownika</a>(<span class="keywordtype">int</span> Id) { <a class="code" href="class_opcje_wywolania.html#a8bf1daee70d339bf65e28417a2c67cd7" title="Identyfikator użytkownika.">_IdUzytkownika</a> = Id; }
+<a name="l00154"></a>00154 
+<a name="l00166"></a><a class="code" href="class_opcje_wywolania.html#a7477637126e9b34297e7d7db43160e76">00166</a>    <span class="keywordtype">void</span> <a class="code" href="class_opcje_wywolania.html#a7477637126e9b34297e7d7db43160e76" title="Zmienia login użytkownika, który ma być znaleziony.">ZmienLogin</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* sLogin ) {  <a class="code" href="class_opcje_wywolania.html#ab9ee9efb5fb960574e96006902277060" title="Login użytkownika.">_Login</a> = sLogin; }
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168   <span class="keyword">private</span>:
+<a name="l00175"></a><a class="code" href="class_opcje_wywolania.html#a8871cbd38cd2392b0fe5ff3ee5e916f4">00175</a>    <a class="code" href="_opcje_wywolania_8hh.html#a7af1a434c508d1c87a90114a03c8648e" title="Definiuje zbiór wartości określających rodzaje sortowania.">TypSortowania</a>   <a class="code" href="class_opcje_wywolania.html#a8871cbd38cd2392b0fe5ff3ee5e916f4" title="Rodzaj sortowania listy użytkowników.">_RodzajSortowania</a>;
+<a name="l00184"></a><a class="code" href="class_opcje_wywolania.html#a8bf1daee70d339bf65e28417a2c67cd7">00184</a>    <span class="keywordtype">int</span>             <a class="code" href="class_opcje_wywolania.html#a8bf1daee70d339bf65e28417a2c67cd7" title="Identyfikator użytkownika.">_IdUzytkownika</a>;
+<a name="l00194"></a><a class="code" href="class_opcje_wywolania.html#ab9ee9efb5fb960574e96006902277060">00194</a>   std::string     <a class="code" href="class_opcje_wywolania.html#ab9ee9efb5fb960574e96006902277060" title="Login użytkownika.">_Login</a>;
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196 };
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198 
+<a name="l00199"></a>00199 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr class="footer"/><address style="text-align: right;"><small>Wygenerowano Thu May 2 13:02:38 2013 dla Rezultat parsowania opcji wywołania: programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>
