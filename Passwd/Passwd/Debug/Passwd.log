@@ -1,0 +1,11 @@
+﻿Build started 2013-05-07 15:14:23.
+     1>Project "C:\Users\Mateusz\Desktop\Nowy folder\passwd\Passwd\Passwd\Passwd.vcxproj" on node 2 (Build target(s)).
+     1>ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"Debug\Passwd.res" Passwd.rc 
+     1>Passwd.rc(3): fatal error RC1015: cannot open include file 'resource.h'.
+         
+     1>Done Building Project "C:\Users\Mateusz\Desktop\Nowy folder\passwd\Passwd\Passwd\Passwd.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.09

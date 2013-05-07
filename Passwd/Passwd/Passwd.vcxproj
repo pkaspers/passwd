@@ -46,6 +46,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Mateusz\Desktop\Nowy folder\passwd\Passwd\Passwd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -63,6 +65,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="OpcjeWywolania.hh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Passwd.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
